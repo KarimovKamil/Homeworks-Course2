@@ -35,6 +35,7 @@ public class Paint {
 
         frame.setLocation(100, 100);
         frame.setSize(800, 500);
+        frame.setMinimumSize(new Dimension(700, 300));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.getContentPane().add(content, BorderLayout.CENTER);
@@ -107,13 +108,7 @@ public class Paint {
 
     private JButton affineAnimation() {
         JButton affineAnimation = new JButton("Animation");
-        affineAnimation.addActionListener(e -> {
-            try {
-                drawer.animate();
-            } catch (InterruptedException e1) {
-                e1.printStackTrace();
-            }
-        });
+        affineAnimation.addActionListener(e -> drawer.animate());
         return affineAnimation;
     }
 }

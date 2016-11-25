@@ -129,7 +129,7 @@ public class Drawer extends JComponent {
         repaint();
     }
 
-    void animate() throws InterruptedException {
+    void animate() {
         Thread animation = new Thread(() -> {
             animationActive = !animationActive;
             while (animationActive) {
